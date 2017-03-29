@@ -35,5 +35,13 @@ public class LoginPage {
         String usermessage = this.driver.findElement(By.id("ingetRamverk")).getText();
         Assert.assertEquals("Login failed, please try again.", usermessage);
     }
+    public void VerifyDoucheNessIsPresent () {
+        this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("psw")));
+        this.driver.findElement(By.id("usr")).sendKeys("12456påölk");
+        this.driver.findElement(By.id("psw")).sendKeys("678ijhy&/(");
+        this.driver.findElement(By.id("submit")).click();
+        String usermessage = this.driver.findElement(By.id("ingetRamverk")).getText();
+        Assert.assertEquals("Login failed, please try again.", usermessage);
+    }
 
 }
