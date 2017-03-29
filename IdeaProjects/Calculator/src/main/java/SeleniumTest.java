@@ -155,10 +155,6 @@ public class SeleniumTest {
         userStartPage.Loggout();
         userStartPage.IsLoggedOut();
 
-
-
-
-
     }
 
     @Test
@@ -171,6 +167,14 @@ public class SeleniumTest {
 
     @Test
     public void NavigateStartToTV() throws Exception
+    {
+        AftonbladetOne aftonbladetOne = new AftonbladetOne(this.driver);
+        aftonbladetOne.GoToAftonbladetOne();
+        aftonbladetOne.NavigateToTV();
+        aftonbladetOne.VerifyTVSiteIsThere();
+    }
+    @Test
+    public void DaDoucheMethod() throws Exception
     {
         AftonbladetOne aftonbladetOne = new AftonbladetOne(this.driver);
         aftonbladetOne.GoToAftonbladetOne();

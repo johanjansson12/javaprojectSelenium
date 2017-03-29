@@ -27,7 +27,6 @@ public class UserStartPage {
         this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login")));;
         String login = this.driver.findElement(By.id("login")).getText();
         Assert.assertEquals("Login", login);
-
     }
 
 }
